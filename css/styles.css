@@ -6,3 +6,16 @@
 #hide3, #hide2 {
   display: none;
 }
+body {
+  background-color: #b3d6b8;
+}
+.jumbotron {
+  text-align: center;
+  background-color: rgba(208, 229, 211, .9);
+}
+.well {
+  background-color: rgba(237, 244, 238, .5);
+}
+.btn {
+  background-color: white;
+}
