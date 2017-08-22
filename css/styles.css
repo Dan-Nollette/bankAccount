@@ -1,5 +1,8 @@
 .balance {
   width: 200px;
   text-align: center;
-  
+}
+
+#hide3, #hide2 {
+  display: none;
 }

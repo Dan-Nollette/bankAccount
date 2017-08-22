@@ -1,6 +1,6 @@
 //Business Logic
 function Account(name, firstDeposit){
-  this.name = "name";
+  this.name = name;
   this.balance = firstDeposit;
 }
 
@@ -20,7 +20,6 @@ Account.prototype.displayPrice = function(){
 
 $(document).ready(function(){
   var newAccount = new Account("", 0);
-
   $("#new-account").submit(function(event){
     event.preventDefault();
     var name = $("#name").val();
@@ -28,6 +27,8 @@ $(document).ready(function(){
     newAccount.name = name;
     newAccount.balance = firstDeposit;
     $(".output").append(newAccount.displayPrice());
+    $(".nameOutput").append(name);
+    $("#hide1, #hide2, #hide3").toggle();
   });
 
   $("#manage").submit(function(event){
@@ -42,5 +43,8 @@ $(document).ready(function(){
     }
     $(".output").text("");
     $(".output").append(newAccount.displayPrice());
+    $(".nameOutput").append(name);
+    $("#deposit").val("");
+    $("#withdrawal").val("");
   });
 });
